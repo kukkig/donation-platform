@@ -1,0 +1,164 @@
+@import '../app.component.scss';
+
+
+:host {
+  @include flexbox;
+}
+
+a {
+    cursor: pointer;
+  }
+  
+.header {
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  }
+
+.button-group {
+  padding: 3px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.btn-primary {
+    color:black;
+    background-color: white;
+    border-color: black;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: black;
+    background-color: #a8a8a8;
+    border-color: black;
+}
+
+button#login-btn:hover {
+  background-color: #a8a8a8;
+}
+
+button#login-btn:active {
+  background-color: #838080;
+}
+
+button#signin-btn:active, button#signin-btn:hover {
+  background-color: rgb(245, 98, 127);
+}
+
+.login-button {
+  padding: 4px;
+}
+
+.signin-button {
+  padding: 4px;
+}
+
+button#signin-btn {
+  background-color: rgb(240, 69, 103);
+}
+
+.logo-container {
+    width: 280px;
+    height: auto;
+    padding: 5px;
+  
+    .logo {
+      width: auto;
+      height: 100%;
+      max-height: 88px;
+      transition: all .2s linear;
+    }
+  }
+
+  .navigation {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding: 5px;
+    height: 100%;
+  
+  }
+
+  .container {
+    width: auto;
+    height: 120px;
+    padding: 5px;
+  }
+
+  .login {
+    color: black;
+  }
+
+.search-box {
+  align-items: center;
+  width: 200px;
+  display: flex;
+}
+
+.search-btn {
+  height: max-content;
+}
+
+.search-i {
+  height: fit-content;
+}
+
+  nav {
+    @include flexbox;
+    @include justify-content(center);
+  
+    background: rgba(0, 0, 0, 0.05);
+  
+    &.nav-desktop {
+      visibility: visible;
+      background: none;
+      width: auto;
+      padding-left: 15px;
+  
+      @include justify-content(flex-start);
+      @include flex-grow(2);
+  
+      margin-right: 22px;
+  
+      .menu {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 5px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        border-bottom: 2px solid #ffffff;
+        width: 117px;
+        justify-content: center;
+        text-decoration: none;
+  
+        &:hover:not(.active) {
+          border-bottom-color:  #0053a4;
+        }
+  
+        &.active {
+          border-bottom-color:  #0053a4;
+        }
+  
+      }
+  
+      a {
+        padding: 0 10px;
+        font-size: 16px;
+      }
+    }
+  
+    a {
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      margin: 10px;
+      text-decoration: none;
+  
+      &.active {
+        text-decoration: underline;
+        border-bottom-color:  #0053a4;
+      }
+    }
+  }

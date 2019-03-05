@@ -1,0 +1,155 @@
+.column {
+    padding: 10px;
+    flex-basis: 25%;
+    flex-grow: 0;
+
+    &.goback-box {
+        margin: 10px 0 10px 0;
+    }
+}
+
+.container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+    &.back-btn {
+        justify-content: left;
+    }
+
+    &.creation-label-pic {
+    padding: 30px 1px 30px 1px;
+    }
+}
+
+button.btn {
+    color: black;
+
+    &.goback-btn {
+        background-color: transparent;
+        border: none;
+
+        i.sign-back {
+            margin: 0 20px 0 0;
+        }
+
+        span.goback-txt {
+            font-weight: 600;
+        }
+    }
+}
+
+img.creation-pic {
+    max-width: 350px;
+    max-height: 450px;
+    width: auto;
+    height: auto;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 50px;
+}
+
+input {
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(197, 195, 195);
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+
+    &#campaign-title {
+        width: 350px;
+        display: inline-block;
+    }
+
+    &.target-fund-input {
+        width: 150px;
+    }
+
+    &.recipient-input {
+        width: 150px;
+        display: inherit;
+    }
+
+    &.deadline-input {
+        width: 150px;
+        display: inline-block;
+    }
+}
+
+div.title-box, div.category-box, div.target-funds-box {
+    display: flex;
+}
+
+div.recipient-box {
+    display: inline-block;
+}
+
+label {
+    width: 120px;
+    margin-top: 0.5rem;
+    font-weight: 600;
+
+    &.target-funds-label {
+        width: 120px;
+    }
+
+    &.recipient-label {
+        width: 120px;
+        display: inline-block;
+    }
+
+    &.deadline-label {
+        width: 100px;
+        margin-left: 0.5rem;
+        display: inline-block;
+    }
+
+    &.description-box-label {
+        width: auto;
+        margin-top: 0px;
+    }
+
+    &.currency {
+        width: 100px;
+        padding: 0 15px 0 15px;
+    }
+}
+
+textarea {
+    resize: none;
+    vertical-align: top;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(197, 195, 195);
+}
+
+select {
+    width: 350px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(197, 195, 195);
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right rgb(197, 195, 195);
+    -webkit-appearance: none;
+    background-position-x: 310px;
+}
+
+.create-button {
+    margin: 15px 10px 15px 10px;
+}
+
+button {
+    color: black;
+
+    &.create-btn {
+        border: none;
+        background-color: rgb(15, 202, 77);
+    }
+}

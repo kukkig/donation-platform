@@ -1,0 +1,75 @@
+.site-logo {
+    margin: 3px 5px 3px 5px;
+    padding: 30px 1px 30px 1px;
+}
+
+.column {
+    padding: 10px;
+    flex-basis: 25%;
+    flex-grow: 0;
+}
+
+.container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.logo {
+    max-width: 350px;
+    max-height: 450px;
+    width: auto;
+    height: auto;
+}
+
+input {
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(197, 195, 195);
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+@media (max-width: 1440px) {
+    #username, #password {
+        width: 295px;
+    }
+}
+
+label {
+    width: 100px;
+}
+
+#username, #password {
+    display: inline-block;
+}
+
+.login-button1, .login-button2 {
+    width: 180px;
+    display: inline-block;
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(240, 69, 103);
+
+    &#donor-btn, &#fundraiser-btn {
+        margin: 5px;
+        padding-right: 10px;
+    }
+
+    &#donor-btn:hover, &#fundraiser-btn:hover {
+        background-color:  rgb(245, 98, 127);
+    }
+}

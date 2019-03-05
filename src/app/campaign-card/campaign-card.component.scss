@@ -1,0 +1,35 @@
+.column, .campaign-name {
+    padding: 10px;
+    flex-basis: 25%;
+    flex-grow: 0;
+}
+
+.container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+img {
+    max-width: 250px;
+    max-height: 300px;
+    width: 100%;
+}
+
+.create-button, .delete-button {
+    margin: 0 10px 0 10px;
+}
+
+button {
+    color: black;
+
+    &.create-btn {
+        border: none;
+        background-color: rgb(15, 202, 77);
+    }
+
+    &.delete-btn {
+        border: none;
+        background-color: #db4361;
+    }
+}

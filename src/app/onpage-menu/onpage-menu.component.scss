@@ -1,0 +1,26 @@
+.column {
+    padding: 10px;
+    flex-basis: 25%;
+    flex-grow: 0;
+}
+
+.container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#menu-link { 
+    background-color: rgb(207, 207, 207);
+    border: none;
+    border-radius: 100px;
+}
+
+a#campaign, a#transfer, a#withdraw, a#history {
+    font-weight: 500;
+    color: black;
+
+    &:hover, &:focus, &:active {
+        color: rgb(155, 131, 131);
+    }
+}

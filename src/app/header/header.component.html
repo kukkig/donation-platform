@@ -1,0 +1,56 @@
+<div class="header">
+  <div class="container navigation" style="color: #000000;">
+    <!-- LOGO -->
+    <div class="logo-container">
+      <a routerLink="/">
+        <img [lazyLoad]="logo" class="logo"/>
+      </a>
+    </div>
+
+    <!-- NAV BAR LIST -->
+    <nav class="nav-desktop">
+    
+      <!-- SEARCH BOX -->
+      <div class="row">
+        <div class="input-group search-box">
+            <input class="form-control py-2 border-right-0 border" 
+                  type="search" 
+                  placeholder="search" 
+                  id="example-search-input">
+            <span class="input-group-append search-btn">
+                <button class="btn btn-outline-secondary border-left-0 border search-i" 
+                        type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </div>
+      <!-- MENU LOOPING -->
+      <div *ngFor="let navLink of navLinks" class="menu">
+          <!--PARTICULAR MENU BOX-->
+            <a routerLink="/" style="color: #000000;" :before>{{navLink.label}}</a>
+        </div>
+    </nav>
+
+  <!-- BUTTON GROUP -->
+  <div class="button-group">
+    <!-- LOGIN BUTTON -->
+    <div class="login-button">
+      <button class="btn btn-primary" 
+              type="text"
+              id="login-btn">
+        <span class="login" routerLink="/login">Log In</span>
+      </button>
+    </div>
+    <!-- SIGN-IN BUTTON -->
+    <div class="signin-button">
+      <button class="btn btn-primary" 
+              type="text"
+              id="signin-btn">
+        <span class="signin">Sign In</span>
+      </button>
+    </div>
+  </div>
+
+  </div>
+</div>
