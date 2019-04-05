@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ApiService } from '../shared/services/api.service';
 
 @Component({
@@ -14,7 +14,9 @@ export class LoginComponent implements OnInit {
   logo = 'assets/logo-big.png';
 
   invalidLogin: boolean = false;
-  constructor(private formBuilder: FormBuilder, private router: Router, private apiService: ApiService) { }
+  constructor(private formBuilder: FormBuilder, 
+              private router: Router, 
+              private apiService: ApiService) { }
 
   onSubmit() {
     if (this.loginForm.invalid) {
