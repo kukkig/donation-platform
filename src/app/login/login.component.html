@@ -18,7 +18,7 @@
 <!-- LOG IN FIELD-->
 <div class="login-field">
   <div class="container">
-  <form class="login-box">
+  <form class="login-box" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <!---->
     <div class="form-group">
     <!-- USER NAME -->

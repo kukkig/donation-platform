@@ -1,0 +1,22 @@
+div {
+  &.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.column {
+    padding: 10px;
+    flex-basis: 25%;
+    flex-grow: 0;
+  }
+}
+
+table {
+  width: 700px;
+
+  th {
+    background-color: #fc7c9c;
+    color: white;
+  }
+}

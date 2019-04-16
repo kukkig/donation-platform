@@ -12,12 +12,19 @@ import { CampaignCompletionModule } from './campaign-completion/campaign-complet
 
 import { CampaignCardModule } from './campaign-card/campaign-card.module';
 
+import {ApiService} from "./shared/services/api.service";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
+import {TokenInterceptor} from "./shared/services/interceptor";
+
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     HomeModule,
     LoginModule,
     DonorDashboardModule,
@@ -28,7 +35,9 @@ import { AppComponent } from './app.component';
     CampaignCardModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ApiService, {provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi : true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,199 @@
+div.column {
+  padding: 10px;
+  flex-basis: 25%;
+  flex-grow: 0;
+
+  &.digit {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: -webkit-xxx-large;
+    border: solid black;
+    border-radius: 5px;
+    border-width: 2px 2px 2px 2px;
+    margin: 0 10px 0 10px;
+    padding: 0 10px 0 10px;
+  }
+
+  &.currency-label {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: -webkit-xxx-large;
+    margin: 0 10px 0 10px;
+    padding: 0 10px 0 10px;
+  }
+}
+
+div.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.edit-btn-container {
+    justify-content: flex-end;
+  }
+}
+
+div {
+  &.btn-box,
+  &.campaign-id-box {
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+  }
+
+  &.campaign-title-box,
+  &.current-funds-box {
+    width: 500px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+    border: solid black;
+    border-width: 3px 0 3px 0;
+  }
+
+  &.campaign-poster-box {
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.funds-raised-container {
+    display: flex;
+    padding: 10px 0 10px 0;
+  }
+
+  &.funds-progress-bar {
+    // width: 800px;
+    padding: 10px 0 10px 0;
+  }
+
+  &.progress-bar-title-box {
+    text-align: right;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  &.progress,
+  &.progress-bar {
+    height: 40px;
+    border-radius: 50px;
+  }
+
+  &.date-box {
+    display: -webkit-inline-box;
+    padding: 0 200px 0 0;
+  }
+
+  &.donate-box {
+    display: -webkit-inline-box;
+    padding: 0 0 0 200px;
+  }
+
+  &.date-created-box {
+    width: 150px;
+    text-align: center;
+
+    label.campaign-date-label {
+      font-size: 20px;
+      margin: 0 5px 0 5px;
+      vertical-align: text-bottom;
+    }
+  }
+
+  &.donor-amount-box {
+    label.donor-amount-label {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0 10px 0 10px;
+      vertical-align: text-bottom;
+    }
+  }
+
+  &.donate-btn-box {
+    button.donate-btn {
+      margin: 0 10px 0 10px;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      background-color: rgb(255, 112, 136);
+    }
+  }
+
+  &.sub-menubar {
+    padding: 50px 0 50px 0;
+  }
+}
+
+button.edit-btn {
+  width: 75px;
+  background-color: rgb(182, 180, 180);
+  border: none;
+  color: black;
+  font-weight: 500;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+p {
+  &.campaign-id,
+  &.campaign-title,
+  &.current-funds-label {
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 35px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  &.in-progress-bar-label {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+label.progress-bar-title {
+  width: 800px;
+  text-align: center;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(253, 240, 121);
+}
+
+img.poster-img {
+  margin: 0 0 10px 0;
+  padding: 0 0 5px 0;
+}
+
+#menu-link {
+  background-color: rgb(207, 207, 207);
+  border: none;
+  border-radius: 100px;
+  width: 700px;
+  justify-content: center;
+}
+
+a {
+  &#campaign,
+  &#transfer,
+  &#withdraw,
+  &#history {
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: rgb(155, 131, 131);
+    }
+  }
+}

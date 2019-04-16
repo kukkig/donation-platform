@@ -1,0 +1,21 @@
+div {
+  &.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.column {
+    padding: 10px;
+    flex-basis: 25%;
+    flex-grow: 0;
+  }
+}
+
+textarea {
+  width: 700px;
+  resize: none;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(226, 226, 226);
+}
