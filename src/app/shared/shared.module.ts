@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LazyLoadImageModule } from "ng-lazyload-image";
 
 import { HeaderComponent } from "../header/header.component";
@@ -15,7 +16,13 @@ import { CampaignDetailComponent } from "../campaign-detail/campaign-detail.comp
 import { CampaignParticipantListComponent } from "../campaign-participant-list/campaign-participant-list.component";
 import { CampaignProgressReportComponent } from "../campaign-progress-report/campaign-progress-report.component";
 
-const SHARED_MODULES = [CommonModule, RouterModule, LazyLoadImageModule];
+const SHARED_MODULES = [
+  CommonModule,
+  RouterModule,
+  LazyLoadImageModule,
+  FormsModule,
+  ReactiveFormsModule
+];
 
 const SHARED_COMPONENTS = [
   HeaderComponent,

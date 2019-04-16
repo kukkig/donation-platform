@@ -1,9 +1,9 @@
 export class Campaign {
-  title: string;
-  category: string;
-  target: number;
-  recipient: string;
-  deadline: string;
-  description: string;
-  objective: string;
+  public title: string = "";
+  public category: string = "";
+  public target: number;
+  public recipient: string = "";
+  public deadline: string = "";
+  public description: string = "";
+  public objective: string = "";
 }
