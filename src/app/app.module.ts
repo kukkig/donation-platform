@@ -14,7 +14,6 @@ import { CampaignCardModule } from "./campaign-card/campaign-card.module";
 
 import { ApiService } from "./shared/services/api.service";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { TokenInterceptor } from "./shared/services/interceptor";
 
 import { AppComponent } from "./app.component";

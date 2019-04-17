@@ -7,7 +7,6 @@ import { LazyLoadImageModule } from "ng-lazyload-image";
 import { HeaderComponent } from "../header/header.component";
 import { FooterComponent } from "../footer/footer.component";
 
-//import { CampaignCompletionComponent } from '../campaign-completion/campaign-completion.component';
 import { OnpageMenuComponent } from "../onpage-menu/onpage-menu.component";
 import { CampaignCardComponent } from "../campaign-card/campaign-card.component";
 import { CampaignTransferListComponent } from "../campaign-transfer-list/campaign-transfer-list.component";
@@ -15,6 +14,7 @@ import { TransferPopupComponent } from "../transfer-popup/transfer-popup.compone
 import { CampaignDetailComponent } from "../campaign-detail/campaign-detail.component";
 import { CampaignParticipantListComponent } from "../campaign-participant-list/campaign-participant-list.component";
 import { CampaignProgressReportComponent } from "../campaign-progress-report/campaign-progress-report.component";
+import { FundraiserTransferComponent } from "../fundraiser-transfer/fundraiser-transfer.component";
 
 const SHARED_MODULES = [
   CommonModule,
@@ -29,7 +29,7 @@ const SHARED_COMPONENTS = [
   FooterComponent,
   OnpageMenuComponent,
   TransferPopupComponent,
-  //CampaignCompletionComponent,
+  FundraiserTransferComponent,
   CampaignCardComponent,
   CampaignTransferListComponent,
   CampaignDetailComponent,
