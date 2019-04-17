@@ -7,13 +7,31 @@ div {
 
   &.campaign-container {
     width: auto;
+    overflow: hidden;
     margin: 0 80px 0 80px;
     padding: 0 100px 0 100px;
+    display: -webkit-box;
   }
 
-  &.campaign-label-poster,
-  &.campaign-name {
+  &.campaign-label-poster {
+    float: left;
+    height: 275px;
+  }
+
+  &.campaign-transfer-detail {
+    overflow: hidden;
     display: inline-block;
+    height: 275px;
+    position: relative;
+  }
+
+  &.campaign-transfer-btn {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  &.campaign-title-box {
+    margin: 0 0 10px 0;
   }
 }
 
@@ -21,4 +39,27 @@ img {
   max-width: 250px;
   max-height: 300px;
   width: 100%;
+}
+
+label {
+  font-weight: 600;
+
+  &.campaign-title {
+    font-size: 20px;
+  }
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  font-weight: 500;
+
+  &.active-transfer-btn {
+    background-color: rgb(194, 192, 192);
+    color: black;
+    cursor: pointer;
+  }
 }
