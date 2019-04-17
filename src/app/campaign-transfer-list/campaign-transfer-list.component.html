@@ -1,26 +1,69 @@
 <div class="container">
-  <div class="campaign-container">
+  <!-- CAMPAIGN TRANSFER LIST -->
+  <div class="campaign-container" *ngFor="let campaign of campaigns">
     <div class="column">
+      <!-- CAMPAIGN POSTER CONTAINER -->
       <div class="column campaign-label-poster">
         <a routerLink="/campaign-inside">
-          <img [lazyLoad]="poster" class="campaign-poster-m" />
+          <img
+            [lazyLoad]="campaign.poster"
+            class="campaign-poster-m"
+            alt="Campaign Poster"
+          />
         </a>
       </div>
-      <div class="column campaign-name">
-        <label>Campaign aaaaaaa</label>
-      </div>
-    </div>
-  </div>
-
-  <div class="campaign-container">
-    <div class="column">
-      <div class="column campaign-label-poster">
-        <a routerLink="/campaign-inside">
-          <img [lazyLoad]="poster" class="campaign-poster-m" />
-        </a>
-      </div>
-      <div class="column campaign-name">
-        <label>Campaign aaaaaaa</label>
+      <!-- CAMPAIGN TRANSFER DETAIL SECTION -->
+      <div class="column campaign-transfer-detail">
+        <!-- CAMPAIGN TITLE BOX -->
+        <div class="campaign-title-box">
+          <label class="campaign-title">{{ campaign.campaign_title }}</label>
+        </div>
+        <!-- CAMPAIGN DEADLINE BOX -->
+        <div class="campaign-deadline-box">
+          <label class="campaign-deadline"
+            >Deadline: {{ campaign.deadline }}</label
+          >
+        </div>
+        <!-- CAMPAIGN STATUS BOX -->
+        <div class="campaign-status-box">
+          <label style="margin: 0 5px 0 0;">Status: </label>
+          <label
+            class="status-available"
+            style="color: green;"
+            *ngIf="campaign.status === 'Available'"
+          >
+            {{ campaign.status }}</label
+          >
+          <label
+            class="status-outofdate"
+            style="color: red;"
+            *ngIf="campaign.status === 'Out of Date'"
+            >{{ campaign.status }}</label
+          >
+        </div>
+        <!-- CAMPAIGN CURRENT RAISED AMOUNT -->
+        <div class="campaign-raised-amount-box">
+          <label class="campaign-raised"
+            >Raised: {{ campaign.raised | number: "1.0-0" }} THB</label
+          >
+        </div>
+        <!-- CAMPAIGN TRANSFER BUTTON -->
+        <div class="campaign-transfer-btn">
+          <button
+            type="button"
+            *ngIf="campaign.status === 'Available'"
+            class="active-transfer-btn"
+          >
+            TRANSFER
+          </button>
+          <button
+            *ngIf="campaign.status === 'Out of Date'"
+            class="nonactive-transfer-btn"
+            disabled
+          >
+            TRANSFER
+          </button>
+        </div>
       </div>
     </div>
   </div>
