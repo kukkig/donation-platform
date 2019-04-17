@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "campaign_title": "Help Needy Student Grows",
+    "campaign_category": "Education",
+    "target": 10000,
+    "raised": 500,
+    "recipient": "student in border area",
+    "deadline": "18/12/2019",
+    "description": "blah blah blah",
+    "objective": "1-blah blah blah",
+    "poster": "assets/project.PNG",
+    "status": "Available"
+  },
+  {
+    "id": 2,
+    "campaign_title": "Help Allerged Pets at Shelter",
+    "campaign_category": "Animal & Humane",
+    "target": 15000,
+    "raised": 1800,
+    "recipient": "abandoned pets at the shelter",
+    "deadline": "10/02/2019",
+    "description": "blah blah blah",
+    "objective": "1-blah blah blah",
+    "poster": "assets/project.PNG",
+    "status": "Out of Date"
+  },
+  {
+    "id": 3,
+    "campaign_title": "Foods for Cats",
+    "campaign_category": "Animal & Humane",
+    "target": 25000,
+    "raised": 3200,
+    "recipient": "stray cats",
+    "deadline": "15/12/2019",
+    "description": "blah blah blah",
+    "objective": "1-blah blah blah",
+    "poster": "assets/project.PNG",
+    "status": "Available"
+  }
+]

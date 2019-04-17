@@ -1,24 +1,13 @@
 <div class="container">
-  <div class="column">
+  <div class="column" *ngFor="let campaign of campaigns">
     <div class="campaign-label-poster">
       <a routerLink="/campaign-inside">
-        <img [lazyLoad]="poster" class="campaign-poster-m" />
+        <img [lazyLoad]="campaign.poster" class="campaign-poster-m" />
       </a>
     </div>
 
     <div class="campaign-name">
-      <label>Campaign aaaaaaa</label>
-    </div>
-  </div>
-  <div class="column">
-    <div class="campaign-label-poster">
-      <a routerLink="/campaign-inside">
-        <img [lazyLoad]="poster" class="campaign-poster-m" />
-      </a>
-    </div>
-
-    <div class="campaign-name">
-      <label>Campaign aaaaaaa</label>
+      <label class="title-label">{{ campaign.campaign_title }}</label>
     </div>
   </div>
 </div>
