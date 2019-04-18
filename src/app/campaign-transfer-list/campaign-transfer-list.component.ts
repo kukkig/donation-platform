@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { HttpErrorResponse } from "@angular/common/http";
 
@@ -8,6 +8,7 @@ import { HttpErrorResponse } from "@angular/common/http";
   styleUrls: ["./campaign-transfer-list.component.scss"]
 })
 export class CampaignTransferListComponent implements OnInit {
+  @Input() displayed: boolean;
   //poster = "assets/project.PNG";
   campaigns: any[]; //array of campaigns
 
