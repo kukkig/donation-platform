@@ -53,10 +53,14 @@
   </div>
 </div>
 
-<app-campaign-card *ngIf="cardIsShowed"></app-campaign-card>
+<app-campaign-card
+  *ngIf="cardIsShowed"
+  [isFundraiser]="true"
+></app-campaign-card>
 
 <app-campaign-transfer-list
   *ngIf="transferIsShowed"
+  [displayed]="true"
 ></app-campaign-transfer-list>
 
 <app-campaign-progress-report
