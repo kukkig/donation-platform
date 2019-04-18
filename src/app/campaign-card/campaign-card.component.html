@@ -1,18 +1,28 @@
-<div class="container">
-  <div class="column" *ngFor="let campaign of campaigns">
-    <div class="campaign-label-poster">
-      <a routerLink="/campaign-inside">
-        <img [lazyLoad]="campaign.poster" class="campaign-poster-m" />
-      </a>
-    </div>
-
-    <div class="campaign-name">
-      <label class="title-label">{{ campaign.campaign_title }}</label>
+<div class="container" *ngIf="!isFundraiser">
+  <div class="column">
+    <div class="newest-campaign-box">
+      <label class="newest-campaign">NEWEST CAMPAIGN</label>
     </div>
   </div>
 </div>
 
-<div class="container" style="padding: 0 0 50px 0;">
+<div class="container">
+  <section>
+    <div class="column" *ngFor="let campaign of campaigns">
+      <div class="campaign-label-poster">
+        <a routerLink="/campaign-inside">
+          <img [lazyLoad]="campaign.poster" class="campaign-poster-m" />
+        </a>
+      </div>
+
+      <div class="campaign-name">
+        <label class="title-label">{{ campaign.campaign_title }}</label>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="container" style="padding: 0 0 50px 0;" *ngIf="isFundraiser">
   <div class="create-button">
     <button class="btn btn-primary create-btn" type="text">
       <span routerLink="/campaign-creation">CREATE CAMPAIGN</span>

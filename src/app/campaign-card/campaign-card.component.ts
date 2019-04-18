@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { HttpErrorResponse } from "@angular/common/http";
 
@@ -8,6 +8,7 @@ import { HttpErrorResponse } from "@angular/common/http";
   styleUrls: ["./campaign-card.component.scss"]
 })
 export class CampaignCardComponent implements OnInit {
+  @Input() isFundraiser: boolean;
   campaigns: any[]; //array of campaigns
 
   constructor(private httpService: HttpClient) {}
