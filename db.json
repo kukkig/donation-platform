@@ -1,0 +1,45 @@
+{
+  "campaign": [
+    {
+      "id": 1,
+      "title": "Help Needy Student Grows",
+      "target": 10000,
+      "deadline": "2019-09-12",
+      "recipient": "student in border area",
+      "category": "Education",
+      "description": "blah blah blah",
+      "objective": "blah blah blah"
+    },
+    {
+      "id": 2,
+      "title": "Help Allerged Pets at Shelter",
+      "target": 15000,
+      "deadline": "2019-02-10",
+      "recipient": "abandoned pets at the shelter",
+      "category": "Animal & Humane",
+      "description": "blah blah blah",
+      "objective": "blah blah blah"
+    },
+    {
+      "id": 3,
+      "title": "Foods for Cats",
+      "target": 25000,
+      "deadline": "2019-12-15",
+      "recipient": "stray cats",
+      "category": "Animal & Humane",
+      "description": "blah blah blah",
+      "objective": "blah blah blah"
+    }
+  ],
+  "login_list": [
+    {
+    "id": "01",
+    "username": "donor",
+    "password": "1234"
+    },
+    {
+    "id": "02",
+      "username": "fundraiser",
+      "password": "1234"
+    }]
+}
