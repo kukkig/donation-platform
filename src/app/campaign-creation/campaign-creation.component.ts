@@ -65,7 +65,7 @@ export class CampaignCreationComponent implements OnInit {
         },
         error => {
           this.alertService.error(error);
-          this.submitted = false;
+          // this.submitted = false;
         }
       );
   }
