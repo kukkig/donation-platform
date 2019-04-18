@@ -8,6 +8,7 @@ import { HeaderComponent } from "../header/header.component";
 import { FooterComponent } from "../footer/footer.component";
 
 import { OnpageMenuComponent } from "../onpage-menu/onpage-menu.component";
+import { DonorOnpageMenuComponent } from "../donor-onpage-menu/donor-onpage-menu.component";
 import { CampaignCardComponent } from "../campaign-card/campaign-card.component";
 import { CampaignTransferListComponent } from "../campaign-transfer-list/campaign-transfer-list.component";
 import { TransferPopupComponent } from "../transfer-popup/transfer-popup.component";
@@ -15,6 +16,8 @@ import { CampaignDetailComponent } from "../campaign-detail/campaign-detail.comp
 import { CampaignParticipantListComponent } from "../campaign-participant-list/campaign-participant-list.component";
 import { CampaignProgressReportComponent } from "../campaign-progress-report/campaign-progress-report.component";
 import { FundraiserTransferComponent } from "../fundraiser-transfer/fundraiser-transfer.component";
+import { CampaignCompletionComponent } from "../campaign-completion/campaign-completion.component";
+import { CampaignInsideComponent } from "../campaign-inside/campaign-inside.component";
 
 const SHARED_MODULES = [
   CommonModule,
@@ -28,13 +31,16 @@ const SHARED_COMPONENTS = [
   HeaderComponent,
   FooterComponent,
   OnpageMenuComponent,
+  DonorOnpageMenuComponent,
   TransferPopupComponent,
   FundraiserTransferComponent,
   CampaignCardComponent,
   CampaignTransferListComponent,
   CampaignDetailComponent,
   CampaignParticipantListComponent,
-  CampaignProgressReportComponent
+  CampaignProgressReportComponent,
+  CampaignCompletionComponent,
+  CampaignInsideComponent
 ];
 
 @NgModule({

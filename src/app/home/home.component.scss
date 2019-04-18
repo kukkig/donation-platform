@@ -1,70 +1,76 @@
 .site-logo {
-    margin: 3px 5px 3px 5px;
-    padding: 30px 1px 30px 1px;
+  margin: 3px 5px 3px 5px;
+  padding: 30px 1px 30px 1px;
 }
 
 .column {
-    padding: 10px;
-    flex-basis: 25%;
-    flex-grow: 0;
+  padding: 10px;
+  flex-basis: 25%;
+  flex-grow: 0;
 }
 
 .container {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-    max-width: 350px;
-    max-height: 450px;
-    width: auto;
-    height: auto;
+  max-width: 350px;
+  max-height: 450px;
+  width: auto;
+  height: auto;
 }
 
-#menu-link { 
-    background-color: rgb(207, 207, 207);
-    border: none;
-    border-radius: 100px;
+#menu-link {
+  background-color: rgb(207, 207, 207);
+  border: none;
+  border-radius: 100px;
+  width: 700px;
+  justify-content: center;
 }
 
-a#campaign, a#recommend, a#newest {
-    font-weight: 500;
-    color: black;
+a#campaign,
+a#recommend,
+a#newest {
+  font-weight: 500;
+  color: black;
 
-    &:hover, &:focus, &:active {
-        color: rgb(155, 131, 131);
-    }
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgb(155, 131, 131);
+  }
 }
 
 .slideshow-label {
-    margin: 5px;
-    padding: 10px 5px 10px 5px;
+  margin: 5px;
+  padding: 10px 5px 10px 5px;
 }
 
 .campaign-slideshow {
-    margin: 5px;
-    padding: 10px 5px 10px 5px;
+  margin: 5px;
+  padding: 10px 5px 10px 5px;
 }
 
 .carousel-label {
-    color: black;
-    font-weight: 600;
-    font-size: 30px;
-    justify-content: center;
-    display: flex;
+  color: black;
+  font-weight: 600;
+  font-size: 30px;
+  justify-content: center;
+  display: flex;
 }
 
-#label-box {  
-    width: auto; 
-    height: auto;
-    border:solid black;
-    border-width:3px 0 3px 0;
+#label-box {
+  width: auto;
+  height: auto;
+  border: solid black;
+  border-width: 3px 0 3px 0;
 }
 
 .carousel-img {
-    max-width: 550px;
-    max-height: 450px;
-    width: 100%;
-    height: auto;
+  max-width: 550px;
+  max-height: 450px;
+  width: 100%;
+  height: auto;
 }

@@ -1,3 +1,73 @@
-<p>
-  transfer-popup works!
-</p>
+<button
+  class="btn btn-primary donate-btn"
+  type="button"
+  data-toggle="modal"
+  data-target="#exampleModalCenter"
+>
+  DONATE<i class="far fa-heart" style="margin: 0 5px 0 5px;"></i>
+</button>
+
+<!-- MODAL -->
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- START MODAL CONTENT -->
+    <div class="modal-content">
+      <!-- START MODAL HEADER -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">
+          Donate to 'Campaign Title'
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- END MODAL HEADER -->
+      <!-- START MODAL BODY -->
+      <div class="modal-body">
+        <!-- donation form starts here -->
+        <form>
+          <!-- donation amount box -->
+          <div class="form-group">
+            <label
+              for="donation-amount"
+              class="col-form-label donation-amount-label"
+              >Enter amount of money:</label
+            >
+            <input type="text" class="form-control" id="donation-amount" />
+          </div>
+          <!-- payment type box -->
+          <div class="form-group">
+            <label for="payment-type" class="col-form-label payment-type-label"
+              >Pay by:</label
+            >
+            <input type="text" class="form-control" id="payment-type" />
+          </div>
+        </form>
+        <!-- end donation form -->
+      </div>
+      <!-- END MODAL BODY -->
+      <!-- START MODAL FOOTER -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+      <!-- END MODAL FOOTER -->
+    </div>
+    <!-- END MODAL CONTENT -->
+  </div>
+  <!-- MODAL FADE -->
+</div>

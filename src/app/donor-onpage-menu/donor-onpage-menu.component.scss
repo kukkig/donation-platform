@@ -1,4 +1,4 @@
-.column {
+div.column {
   padding: 10px;
   flex-basis: 25%;
   flex-grow: 0;
@@ -16,13 +16,12 @@
   border-radius: 100px;
   width: 700px;
   justify-content: center;
-  text-align: center;
 }
 
 a#campaign,
-a#transfer,
-a#withdraw,
-a#history {
+a#tracking,
+a#donated-campaign {
+  text-align: center;
   font-weight: 500;
   color: black;
   cursor: pointer;

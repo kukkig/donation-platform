@@ -19,32 +19,29 @@
             <!-- SHOW CAMPAIGN -->
             <div class="column">
               <a
-                class="nav-item nav-link"
-                (click)="showCampaignCard()"
+                class="nav-item nav-link menu-box"
                 id="campaign"
-                >CAMPAIGN <span class="sr-only">(current)</span></a
+                (click)="showCampaign()"
+                >NEWEST CAMPAIGN <span class="sr-only">(current)</span></a
               >
             </div>
-            <!-- SHOW TRANSFER LIST -->
+            <!-- SHOW DONATED CAMPAIGN -->
             <div class="column">
               <a
-                class="nav-item nav-link"
-                (click)="showTransferList()"
-                id="transfer"
-                >TRANSFER</a
+                class="nav-item nav-link menu-box"
+                id="donated-campaign"
+                (click)="showDonatedList()"
+                >DONATED CAMPAIGN</a
               >
             </div>
-            <!-- SHOW WITHDRAWAL LIST -->
+            <!-- SHOW CAMPAIGN TRACKING LIST -->
             <div class="column">
               <a
-                class="nav-item nav-link"
-                (click)="showWithdrawList()"
-                id="withdraw"
-                >WITHDRAW</a
+                class="nav-item nav-link menu-box"
+                id="tracking"
+                (click)="showTrackingList()"
+                >DONATION TRACKING</a
               >
-            </div>
-            <div class="column">
-              <a class="nav-item nav-link" href="#" id="history">HISTORY</a>
             </div>
           </div>
         </div>
@@ -53,16 +50,7 @@
   </div>
 </div>
 
-<app-campaign-card
-  *ngIf="cardIsShowed"
-  [isFundraiser]="true"
-></app-campaign-card>
-
-<app-campaign-transfer-list
-  *ngIf="transferIsShowed"
-  [displayed]="true"
-></app-campaign-transfer-list>
-
-<app-campaign-progress-report
-  *ngIf="withdrawIsShowed"
-></app-campaign-progress-report>
+<app-campaign-card *ngIf="showNewC" [isFundraiser]="false"></app-campaign-card>
+<app-campaign-participant-list
+  *ngIf="showTrackingL"
+></app-campaign-participant-list>

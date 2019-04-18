@@ -1,0 +1,23 @@
+.donor-label {
+  margin: 3px 5px 3px 5px;
+  padding: 30px 1px 30px 1px;
+}
+
+.column {
+  padding: 10px;
+  flex-basis: 25%;
+  flex-grow: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closure-label {
+  max-width: 350px;
+  max-height: 450px;
+  width: auto;
+  height: auto;
+}

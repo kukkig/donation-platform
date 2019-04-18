@@ -1,5 +1,176 @@
 <app-header></app-header>
 
-<p>
-  campaign-inside works!
-</p>
+<!-- BUTTON : BACK TO PREVIOUS PAGE -->
+<div class="container back-btn" *ngIf="showbackBtn">
+  <div class="column goback-box">
+    <button class="btn btn-primary goback-btn" type="text">
+      <i class="fas fa-chevron-left sign-back"></i>
+      <span class="goback-txt"
+        ><a routerLink="/donor-dashboard" style="color: black;">BACK</a></span
+      >
+    </button>
+  </div>
+</div>
+
+<!-- BUTTON : EDIT CAMPAIGN DETAIL -->
+<div class="container edit-btn-container" *ngIf="isCompletion">
+  <div class="btn-box">
+    <button class="btn btn-primary edit-btn" type="text">
+      <span class="goback-txt">EDIT</span>
+    </button>
+  </div>
+</div>
+
+<!-- CONTAINER : CAMPAIGN TITLE BOX -->
+<div class="container">
+  <div class="campaign-title-container">
+    <div class="column campaign-id-box" *ngIf="isCompletion">
+      <p class="campaign-id">Campaign ID: 0000000</p>
+    </div>
+    <div class="column campaign-title-box">
+      <p class="campaign-title">CAMPAIGN TITLE</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTAINER : CAMPAIGN POSTER BOX -->
+<div class="container">
+  <div class="campaign-big-poster-container">
+    <div class="column campaign-poster-box">
+      <img [lazyLoad]="campaign_poster" class="poster-img" />
+    </div>
+  </div>
+</div>
+
+<!-- CONTAINER : CURRENT FUNDS -->
+<div class="container">
+  <div class="current-funds-container">
+    <div class="column current-funds-box">
+      <p class="current-funds-label">Current Raised Funds</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTAINER : CURRENT FUNDS RAISED -->
+<div class="container">
+  <div class="funds-raised-container">
+    <div class="column digit">0</div>
+    <div class="column digit">0</div>
+    <div class="column digit">0</div>
+    <div class="column digit">0</div>
+    <div class="column digit">0</div>
+    <div class="column digit">0</div>
+    <div class="column currency-label">THB</div>
+  </div>
+</div>
+
+<!-- CONTAINER : PROGRESS BAR EXHIBITED CURRENT FUNDS -->
+<div class="container">
+  <div class="funds-progress-bar">
+    <!-- PROGRESS BAR TITLE BOX -->
+    <div class="progress-bar-title-box">
+      <label class="progress-bar-title"
+        >Target:<label style="margin: 0 5px 0 5px;">100000</label>THB</label
+      >
+    </div>
+    <!-- END BAR TITLE BOX -->
+    <!-- PROGRESS BAR ELEMENT -->
+    <div class="progress position-relative">
+      <div
+        class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+        role="progressbar"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="width: 25%"
+      ></div>
+      <p
+        class="justify-content-center d-flex position-absolute w-100 in-progress-bar-label"
+      >
+        Raised <label style="margin: 0 5px 0 5px;">25%</label>
+      </p>
+    </div>
+    <!-- END PROGRESS BAR ELEMENT -->
+  </div>
+</div>
+
+<!-- CONTAINER : DATE BOX & DONATE BUTTON BOX -->
+<div class="container">
+  <!-- DATE BOX SECTION -->
+  <div class="date-box">
+    <!-- DATE BOX -->
+    <div class="column date-created-box">
+      <i class="far fa-calendar-alt" style="font-size: 36px;"></i>
+      <label class="campaign-date-label">{{ today | date: "shortDate" }}</label>
+    </div>
+    <!-- END DATE BOX-->
+    <!-- DONOR AMOUNT BOX -->
+    <div class="column donor-amount-box">
+      <i class="fas fa-user" style="font-size: 36px;"></i>
+      <label class="donor-amount-label">20</label>
+    </div>
+    <!-- END DONOR AMOUNT BOX -->
+  </div>
+
+  <!-- DONATE BOX SECTION -->
+  <div class="donate-box">
+    <div class="column donate-btn-box">
+      <app-transfer-popup></app-transfer-popup>
+    </div>
+  </div>
+  <!-- END DONATE BTN BOX SECTION -->
+</div>
+
+<!-- ON PAGE NAV BAR -->
+<div class="sub-menubar">
+  <div class="container">
+    <div class="column" id="sub-menubar">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav" id="menu-link">
+            <!-- SHOW CAMPAIGN -->
+            <div class="column">
+              <a class="nav-item nav-link" id="detail" (click)="showDetail()"
+                >DETAILS<span class="sr-only">(current)</span></a
+              >
+            </div>
+            <!-- SHOW TRANSFER LIST -->
+            <div class="column">
+              <a
+                class="nav-item nav-link"
+                id="progress"
+                (click)="showProgress()"
+                >PROGRESS</a
+              >
+            </div>
+            <!-- SHOW WITHDRAWAL LIST -->
+            <div class="column">
+              <a class="nav-item nav-link" id="donor-list" (click)="showParty()"
+                >DONOR LIST</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<app-campaign-detail *ngIf="detail_displayed"></app-campaign-detail>
+<app-campaign-progress-report
+  *ngIf="progress_displayed"
+></app-campaign-progress-report>
+<app-campaign-participant-list
+  *ngIf="party_displayed"
+></app-campaign-participant-list>

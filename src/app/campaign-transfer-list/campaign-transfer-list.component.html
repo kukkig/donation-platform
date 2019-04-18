@@ -48,7 +48,7 @@
           >
         </div>
         <!-- CAMPAIGN TRANSFER BUTTON -->
-        <div class="campaign-transfer-btn">
+        <div class="campaign-transfer-btn" *ngIf="displayed">
           <button
             type="button"
             *ngIf="campaign.status === 'Available'"

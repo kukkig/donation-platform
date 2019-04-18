@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-donor-dashboard',
-  templateUrl: './donor-dashboard.component.html',
-  styleUrls: ['./donor-dashboard.component.scss']
+  selector: "app-donor-dashboard",
+  templateUrl: "./donor-dashboard.component.html",
+  styleUrls: ["./donor-dashboard.component.scss"]
 })
 export class DonorDashboardComponent implements OnInit {
+  donorlabel = "assets/logo-big.png";
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
