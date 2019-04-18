@@ -6,7 +6,7 @@
     <button class="btn btn-primary goback-btn"
             type="text">
     <i class="fas fa-chevron-left sign-back"></i>
-    <span class="goback-txt">BAK</span></button>
+    <span class="goback-txt">BACK</span></button>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
 
 <!-- FORM: CAMPAIGN CREATION FORM -->
 <div class="container campaign-creation-box">
-  <form>
+  <form [formGroup]="campaignForm" (ngSubmit)="onSubmit()">
 
   <!-- Title Box -->
   <div class="form-group title-box">
@@ -28,7 +28,8 @@
           id="campaign-title"
           name="campaign-title" 
           class="form-control" 
-          placeholder="Enter your campaign title">
+          placeholder="Enter your campaign title"
+          formControlName="title">
   </div>
 
   <!-- Category Box -->
@@ -36,7 +37,8 @@
     <label class="category-list-label">Category</label>
     <!-- NEED TO IMPLEMENT 'ngFor' -->
     <select class="form-control" 
-            id="category-list-selection">
+            id="category-list-selection"
+            formControlName="category">
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -51,7 +53,8 @@
     <input type="text"
             id="target-fund"
             name="target-fund"
-            class="form-control target-fund-input">
+            class="form-control target-fund-input"
+            formControlName="target">
     <label class="currency">THB</label>
   </div> 
 
@@ -61,45 +64,52 @@
     <input type="text"
             id="recipient"
             name="recipient"
-            class="form-control recipient-input">
+            class="form-control recipient-input"
+            formControlName="recipient">
   <!-- Deadline Box -->  
     <label class="deadline-label">Deadline</label>
-    <input type="text"
+    <input type="date"
             id="deadline"
             name="deadline"
-            class="form-control deadline-input">
+            class="form-control deadline-input"
+            formControlName="deadline">
   </div>
 
-  <!-- Description Box -->
-  <div class="form-group description-box">
-    <label class="description-box-label">Description</label>
-    <textarea type="text"
-          rows="5"
-          id="campaign-description"
-          name="campaign-description" 
-          class="form-control" 
-          placeholder="Enter your campaign details"></textarea>
-  </div>
+<!-- Description Box -->
+<div class="form-group description-box">
+  <label class="description-box-label">Description</label>
+  <textarea type="text"
+        rows="5"
+        id="campaign-description"
+        name="campaign-description" 
+        class="form-control"
+        formControlName="description" 
+        placeholder="Enter your campaign details"></textarea>
+</div>
 
-  <!-- Objective Box -->
-  <div class="form-group objective-box">
-    <label class="objective-box-label">Objective</label>
-    <textarea type="text"
-          rows="5"
-          id="campaign-objective"
-          name="campaign-objective" 
-          class="form-control" 
-          placeholder="Enter your campaign objective"></textarea>
-  </div>
+<!-- Objective Box -->
+<div class="form-group objective-box">
+  <label class="objective-box-label">Objective</label>
+  <textarea type="text"
+        rows="5"
+        id="campaign-objective"
+        name="campaign-objective" 
+        class="form-control"
+        formControlName="objective" 
+        placeholder="Enter your campaign objective"></textarea>
+</div>
 
 <!-- BUTTON : CREATE SUBMIT -->
 <div class="container">
   <div class="create-button">
     <button class="btn btn-primary create-btn"
-            type="text"
-            ><span routerLink="/campaign-completion">CREATE</span></button>
+            type="submit"
+            
+            >CREATE</button>
   </div>
+
 </div>
 
 </form>
 </div>
+
